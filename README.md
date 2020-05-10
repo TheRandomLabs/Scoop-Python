@@ -10,5 +10,5 @@ standalone executables.
 
 This bucket is an alternative to using pip to install these packages.
 
-Note that uninstalling a package in this bucket will not uninstall its dependencies to avoid
-conflicts.
+Note that for the purpose of avoiding conflicts, uninstalling a package in this bucket will not
+uninstall its dependencies.
