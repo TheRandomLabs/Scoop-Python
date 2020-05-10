@@ -1,0 +1,35 @@
+{
+    "version": "46.1.3",
+    "homepage": "https://github.com/pypa/setuptools",
+    "description": "Library designed to facilitate packaging Python projects.",
+    "license": "MIT",
+    "depends": "python",
+    "url": "https://github.com/pypa/setuptools/archive/v46.1.3.zip",
+    "hash": "b555cf73703162c7aa003bf1895184cecea81a512e324d9e8d34a47204324c15",
+    "extract_dir": "setuptools-46.1.3",
+    "installer": {
+        "script": [
+            "Push-Location $dir",
+            "python bootstrap.py",
+            "if ($global) { python setup.py --quiet install --record installed_files.txt }",
+            "else { python setup.py --quiet install --user --record installed_files.txt }",
+            "Pop-Location"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Get-Content \"$dir\\installed_files.txt\" | Remove-Item -ErrorAction Ignore -Force",
+            "if ($global) { $site_packages = \"$(Split-Path (scoop which python))\\lib\\site-packages\" }",
+            "else { $site_packages = python.exe -m site --user-site }",
+            "Get-ChildItem \"$site_packages\\setuptools-$version*-py*.egg\" | Select-Object -First 1 | Remove-Item -ErrorAction Ignore -Force -Recurse"
+        ]
+    },
+    "checkver": {
+        "url": "https://api.github.com/repos/pypa/setuptools/tags",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/pypa/setuptools/archive/v$version.zip",
+        "extract_dir": "setuptools-$version"
+    }
+}
