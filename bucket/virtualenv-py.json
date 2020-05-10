@@ -7,7 +7,7 @@
         "git",
         "python"
     ],
-    "url": "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Python/master/virtualenv.txt",
+    "url": "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Python/master/placeholder.txt",
     "hash": "66b78de3a9371c93386d913e560855f60e840a317a375792a108e6bdcb8061f1",
     "installer": {
         "script": [

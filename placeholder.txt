@@ -1,0 +1,1 @@
+This file exists so that a URL can be specified in a manifest where there would ideally be none.
