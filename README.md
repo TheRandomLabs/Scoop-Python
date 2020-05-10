@@ -15,3 +15,6 @@ uninstall its dependencies.
 
 For local installs, binaries may not be added to PATH due to
 [ScoopInstaller/Main#772](https://github.com/ScoopInstaller/Main/issues/772).
+
+Global installs will be reset after Python is updated due to
+[lukesampson/scoop#2180](https://github.com/lukesampson/scoop/issues/2180).
