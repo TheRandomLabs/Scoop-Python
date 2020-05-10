@@ -1,0 +1,31 @@
+{
+    "version": "0.20",
+    "homepage": "https://github.com/okigan/awscurl",
+    "description": "Curl-like tool for accessing AWS resources.",
+    "license": "MIT",
+    "depends": "python",
+    "url": "https://github.com/okigan/awscurl/archive/v0.20.zip",
+    "hash": "4a73f5f66ae6e19a5ae61b95318c26ce811bd5eab898e5ca02f6adbc403ba49b",
+    "extract_dir": "awscurl-0.20",
+    "installer": {
+        "script": [
+            "Push-Location $dir",
+            "if ($global) { python setup.py --quiet install --record installed_files.txt }",
+            "else { python setup.py --quiet install --user --record installed_files.txt }",
+            "Pop-Location"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "(Get-Content \"$dir\\installed_files.txt\") -match '.*awscurl.*' | ForEach-Object { Remove-Item -ErrorAction Ignore -Force $_ }",
+            "if ($global) { $site_packages = \"$(Split-Path (scoop which python))\\lib\\site-packages\" }",
+            "else { $site_packages = python.exe -m site --user-site }",
+            "Get-ChildItem \"$site_packages\\awscurl-$version-py*.egg\" | Select-Object -First 1 | Remove-Item -ErrorAction Ignore -Force -Recurse"
+        ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/okigan/awscurl/archive/v$version.zip",
+        "extract_dir": "awscurl-$version"
+    }
+}

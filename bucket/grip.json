@@ -1,0 +1,31 @@
+{
+    "version": "4.5.2",
+    "homepage": "https://github.com/joeyespo/grip",
+    "description": "Renders Markdown files.",
+    "license": "MIT",
+    "depends": "python",
+    "url": "https://github.com/joeyespo/grip/archive/v4.5.2.zip",
+    "hash": "dafdd057f75041d07ed2f518050b90ff9a9be37a7c01c93d63b11bfa4d02ce58",
+    "extract_dir": "grip-4.5.2",
+    "installer": {
+        "script": [
+            "Push-Location $dir",
+            "if ($global) { python setup.py --quiet install --record installed_files.txt }",
+            "else { python setup.py --quiet install --user --record installed_files.txt }",
+            "Pop-Location"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "(Get-Content \"$dir\\installed_files.txt\") -match '.*grip.*' | ForEach-Object { Remove-Item -ErrorAction Ignore -Force $_ }",
+            "if ($global) { $site_packages = \"$(Split-Path (scoop which python))\\lib\\site-packages\" }",
+            "else { $site_packages = python.exe -m site --user-site }",
+            "Get-ChildItem \"$site_packages\\grip-$version-py*.egg\" | Select-Object -First 1 | Remove-Item -ErrorAction Ignore -Force -Recurse"
+        ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/joeyespo/grip/archive/v$version.zip",
+        "extract_dir": "grip-$version"
+    }
+}

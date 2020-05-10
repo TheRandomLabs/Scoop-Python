@@ -1,0 +1,31 @@
+{
+    "version": "1.3.0",
+    "homepage": "https://github.com/twolfson/restructuredtext-lint",
+    "description": "reStructuredText linter.",
+    "license": "Unlicense",
+    "depends": "python",
+    "url": "https://github.com/twolfson/restructuredtext-lint/archive/1.3.0.zip",
+    "hash": "9b1937a38384bd55f4ef7d8f79438571c4871a6f0d316f2e655fea113e63c4fb",
+    "extract_dir": "restructuredtext-lint-1.3.0",
+    "installer": {
+        "script": [
+            "Push-Location $dir",
+            "if ($global) { python setup.py --quiet install --record installed_files.txt }",
+            "else { python setup.py --quiet install --user --record installed_files.txt }",
+            "Pop-Location"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "(Get-Content \"$dir\\installed_files.txt\") -match '.*restructuredtext.lint.*|rst-lint.*' | ForEach-Object { Remove-Item -ErrorAction Ignore -Force $_ }",
+            "if ($global) { $site_packages = \"$(Split-Path (scoop which python))\\lib\\site-packages\" }",
+            "else { $site_packages = python.exe -m site --user-site }",
+            "Get-ChildItem \"$site_packages\\restructuredtext_lint-$version-py*.egg\" | Select-Object -First 1 | Remove-Item -ErrorAction Ignore -Force -Recurse"
+        ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/twolfson/restructuredtext-lint/archive/$version.zip",
+        "extract_dir": "restructuredtext-lint-$version"
+    }
+}

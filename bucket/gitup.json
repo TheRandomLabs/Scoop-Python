@@ -1,0 +1,31 @@
+{
+    "version": "0.5.1",
+    "homepage": "https://github.com/earwig/git-repo-updater",
+    "description": "Tool for updating multiple Git repositories at once.",
+    "license": "MIT",
+    "depends": "python",
+    "url": "https://github.com/earwig/git-repo-updater/archive/v0.5.1.zip",
+    "hash": "55592200c4c2ee69d7b53a1d7119a11b4d28cc9642bdf4d6e8fcd4fafa0f6fd8",
+    "extract_dir": "git-repo-updater-0.5.1",
+    "installer": {
+        "script": [
+            "Push-Location $dir",
+            "if ($global) { python setup.py --quiet install --record installed_files.txt }",
+            "else { python setup.py --quiet install --user --record installed_files.txt }",
+            "Pop-Location"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "(Get-Content \"$dir\\installed_files.txt\") -match '.*gitup.*' | ForEach-Object { Remove-Item -ErrorAction Ignore -Force $_ }",
+            "if ($global) { $site_packages = \"$(Split-Path (scoop which python))\\lib\\site-packages\" }",
+            "else { $site_packages = python.exe -m site --user-site }",
+            "Get-ChildItem \"$site_packages\\gitup-$version-py*.egg\" | Select-Object -First 1 | Remove-Item -ErrorAction Ignore -Force -Recurse"
+        ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/earwig/git-repo-updater/archive/v$version.zip",
+        "extract_dir": "git-repo-updater-$version"
+    }
+}
