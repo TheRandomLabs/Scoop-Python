@@ -1,0 +1,33 @@
+{
+    "version": "20.0.20",
+    "homepage": "https://virtualenv.pypa.io/en/latest/",
+    "description": "Virtual Python environment builder.",
+    "license": "MIT",
+    "depends": [
+        "git",
+        "python"
+    ],
+    "url": "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Python/master/virtualenv.txt",
+    "hash": "d9e0b2b2bbfb7a8472d0d422aeeb4015072d201e0fa68a75cebd8e8e352d1abd",
+    "installer": {
+        "script": [
+            "git clone --quiet --branch $version https://github.com/pypa/virtualenv.git \"$dir\\virtualenv\"",
+            "Push-Location \"$dir\\virtualenv\"",
+            "if ($global) { python setup.py --quiet install --record \"$dir\\installed_files.txt\" }",
+            "else { python setup.py --quiet install --user --record \"$dir\\installed_files.txt\" }",
+            "Pop-Location"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Get-Content \"$dir\\installed_files.txt\" | Remove-Item -ErrorAction Ignore -Force",
+            "if ($global) { $site_packages = \"$(Split-Path (scoop which python))\\lib\\site-packages\" }",
+            "else { $site_packages = python.exe -m site --user-site }",
+            "Get-ChildItem \"$site_packages\\virtualenv-$version*-py*.egg\" | Select-Object -First 1 | Remove-Item -ErrorAction Ignore -Force -Recurse"
+        ]
+    },
+    "checkver": {
+        "url": "https://api.github.com/repos/pypa/virtualenv/tags",
+        "jsonPath": "$[0].name"
+    }
+}

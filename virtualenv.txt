@@ -1,0 +1,1 @@
+This file exists so that a URL can be specified in the virtualenv-py manifest.
