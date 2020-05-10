@@ -8,7 +8,7 @@
         "python"
     ],
     "url": "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Python/master/virtualenv.txt",
-    "hash": "d9e0b2b2bbfb7a8472d0d422aeeb4015072d201e0fa68a75cebd8e8e352d1abd",
+    "hash": "66b78de3a9371c93386d913e560855f60e840a317a375792a108e6bdcb8061f1",
     "installer": {
         "script": [
             "git clone --quiet --branch $version https://github.com/pypa/virtualenv.git \"$dir\\virtualenv\"",
