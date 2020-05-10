@@ -12,3 +12,6 @@ This bucket is an alternative to using pip to install these packages.
 
 Note that for the purpose of avoiding conflicts, uninstalling a package in this bucket will not
 uninstall its dependencies.
+
+For local installs, binaries may not be added to PATH due to
+[ScoopInstaller/Main#772](https://github.com/ScoopInstaller/Main/issues/772).
