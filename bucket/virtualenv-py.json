@@ -11,7 +11,7 @@
     "hash": "66b78de3a9371c93386d913e560855f60e840a317a375792a108e6bdcb8061f1",
     "installer": {
         "script": [
-            "git clone --quiet --branch $version https://github.com/pypa/virtualenv.git \"$dir\\virtualenv\"",
+            "git clone --quiet -c advice.detachedHead=false --branch $version https://github.com/pypa/virtualenv.git \"$dir\\virtualenv\"",
             "Push-Location \"$dir\\virtualenv\"",
             "if ($global) { python setup.py --quiet install --record \"$dir\\installed_files.txt\" }",
             "else { python setup.py --quiet install --user --record \"$dir\\installed_files.txt\" }",
