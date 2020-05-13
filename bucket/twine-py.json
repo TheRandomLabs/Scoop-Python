@@ -1,0 +1,36 @@
+{
+    "version": "3.1.1",
+    "homepage": "https://github.com/pypa/twine",
+    "description": "Utilities for interacting with PyPI.",
+    "license": "Apache-2.0",
+    "depends": [
+        "git",
+        "python"
+    ],
+    "url": "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Python/master/placeholder.txt",
+    "hash": "8f5572e508c2cb95197e550f54c6bc03cfd4668ef3c9f1011ec3950037cb4b11",
+    "installer": {
+        "script": [
+            "git clone --quiet -c advice.detachedHead=false --branch $version https://github.com/pypa/twine.git \"$dir\\twine\"",
+            "Push-Location \"$dir\\twine\"",
+            "if ($global) { python setup.py --quiet install --record \"$dir\\installed_files.txt\" }",
+            "else { python setup.py --quiet install --user --record \"$dir\\installed_files.txt\" }",
+            "Pop-Location"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Get-Content \"$dir\\installed_files.txt\" | Remove-Item -ErrorAction Ignore -Force",
+            "if ($global) { $site_packages = \"$(Split-Path (scoop which python))\\lib\\site-packages\" }",
+            "else { $site_packages = python.exe -m site --user-site }",
+            "Get-ChildItem \"$site_packages\\twine-*-py*.egg\" | ForEach-Object { Remove-Item -ErrorAction Ignore -Force -Recurse $_ }"
+        ]
+    },
+    "checkver": {
+        "url": "https://api.github.com/repos/pypa/twine/tags",
+        "jsonPath": "$[0].name"
+    },
+    "autoupdate": {
+        "url": "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Python/master/placeholder.txt"
+    }
+}
