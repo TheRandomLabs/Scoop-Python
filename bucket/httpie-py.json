@@ -19,7 +19,7 @@
         "script": [
             "(Get-Content \"$dir\\installed_files.txt\") -match '.*http.*' | Remove-Item -ErrorAction Ignore -Force",
             "if ($global) { $site_packages = \"$(Split-Path (scoop which python))\\lib\\site-packages\" }",
-            "else { $site_packages = python.exe -m site --user-site }",
+            "else { $site_packages = python -m site --user-site }",
             "Get-ChildItem \"$site_packages\\httpie-*-py*.egg\" | ForEach-Object { Remove-Item -ErrorAction Ignore -Force -Recurse $_ }"
         ]
     },
