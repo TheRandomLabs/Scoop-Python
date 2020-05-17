@@ -1,12 +1,12 @@
 {
-    "version": "46.3.1",
+    "version": "46.4.0",
     "homepage": "https://github.com/pypa/setuptools",
     "description": "Library designed to facilitate packaging Python projects.",
     "license": "MIT",
     "depends": "python",
-    "url": "https://github.com/pypa/setuptools/archive/v46.3.1.zip",
-    "hash": "1b62abf814e48c0d511bcbec346a9761ca60a013cfc8cd46212e4b12e5779a2f",
-    "extract_dir": "setuptools-46.3.1",
+    "url": "https://github.com/pypa/setuptools/archive/v46.4.0.zip",
+    "hash": "6610508d2134b4865469ea6ea0aebe10ae224f3f63b0fdfd69b619dcee921ea5",
+    "extract_dir": "setuptools-46.4.0",
     "installer": {
         "script": [
             "Push-Location $dir",
