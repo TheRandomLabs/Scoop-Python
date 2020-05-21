@@ -11,6 +11,15 @@ standalone executables.
 
 This bucket is an alternative to using pip to install these packages.
 
+## Reasoning
+
+* pip does not have a built-in functionality to update all packages. This is inconvenient for
+command-line tools and other executable applications such as HTTPie.
+* pip does not have a simple way to preserve packages between Python updates. Again, this is
+inconvenient for command-line tools and other executable applications such as HTTPie.
+* Python virtual environments should be used to install other packages, so only executable
+applications are accepted into this bucket.
+
 ## Drawbacks
 
 * For the purpose of avoiding conflicts, uninstalling a package in this bucket will not
