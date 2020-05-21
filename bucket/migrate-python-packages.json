@@ -1,10 +1,10 @@
 {
-    "version": "2020-05-21T04.54.07",
+    "version": "2020-05-21T08.59.39",
     "homepage": "https://github.com/TheRandomLabs/Scoop-Python#migrate-python-packages",
     "description": "Migrates packages installed from this bucket between Python versions.",
     "license": "Unlicense",
     "url": "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Python/master/scripts/migrate-python-packages.ps1",
-    "hash": "6003ed51d6171a0ecf872771c59c57642f071f6b22f859d60e0148f71339ea0c",
+    "hash": "18ae736bb32d5c1782f4497bf04445fbe46c0bd63c9cac35114c63e041e89f41",
     "bin": "migrate-python-packages.ps1",
     "checkver": {
         "url": "https://api.github.com/repos/TheRandomLabs/Scoop-Python/commits?path=scripts%2Fmigrate-python-packages.ps1&page=1&per_page=1",
