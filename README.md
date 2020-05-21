@@ -29,11 +29,13 @@ uninstall its dependencies.
 * Packages installed globally from this bucket will need to be migrated for any Python update.
 * Packages installed locally from this bucket will need to be migrated for any minor or major
 Python update.
-* A script to migrate packages in this bucket between Python versions is provided in the `scripts`
-directory of this bucket:
+
+## migrate-python-packages
+
+* A script to migrate packages in this bucket between Python versions is provided as a dependency.
 
 ```powershell
-$ & "$(Split-Path (Split-Path (Get-Command scoop).Source))\buckets\python\scripts\migrate-python-packages.ps1" --help
+$ migrate-python-packages --help
 ```
 
 * For example, to update Python and all packages in this bucket:
@@ -42,5 +44,5 @@ $ & "$(Split-Path (Split-Path (Get-Command scoop).Source))\buckets\python\script
 # Update Python first so that fewer migrations are required if there are also updates for packages in this bucket
 scoop update python
 scoop update *
-& "$(Split-Path (Split-Path (Get-Command scoop).Source))\buckets\python\scripts\migrate-python-packages.ps1"
+migrate-python-packages
 ```
