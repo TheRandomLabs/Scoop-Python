@@ -11,8 +11,8 @@
     "hash": "8f5572e508c2cb95197e550f54c6bc03cfd4668ef3c9f1011ec3950037cb4b11",
     "installer": {
         "script": [
-            "git clone --quiet -c advice.detachedHead=false --branch $version https://github.com/pypa/twine.git \"$dir\\twine\"",
-            "Push-Location \"$dir\\twine\"",
+            "git clone --quiet -c advice.detachedHead=false --branch $version https://github.com/pypa/twine.git \"$dir\\$app\"",
+            "Push-Location \"$dir\\$app\"",
             "if ($global) { python setup.py --quiet install --record \"$dir\\installed_files.txt\" }",
             "else { python setup.py --quiet install --user --record \"$dir\\installed_files.txt\" }",
             "Pop-Location"

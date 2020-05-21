@@ -9,11 +9,10 @@
     ],
     "url": "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Python/master/placeholder.txt",
     "hash": "8f5572e508c2cb95197e550f54c6bc03cfd4668ef3c9f1011ec3950037cb4b11",
-    "extract_dir": "keyring-21.2.1",
     "installer": {
         "script": [
-            "git clone --quiet -c advice.detachedHead=false --branch \"v$version\" https://github.com/jaraco/keyring.git \"$dir\\keyring\"",
-            "Push-Location \"$dir\\keyring\"",
+            "git clone --quiet -c advice.detachedHead=false --branch \"v$version\" https://github.com/jaraco/keyring.git \"$dir\\$app\"",
+            "Push-Location \"$dir\\$app\"",
             "if ($global) { python setup.py --quiet install --record \"$dir\\installed_files.txt\" }",
             "else { python setup.py --quiet install --user --record \"$dir\\installed_files.txt\" }",
             "Pop-Location"
