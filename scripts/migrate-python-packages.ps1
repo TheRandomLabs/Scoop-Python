@@ -28,7 +28,11 @@ if ($err) {
 }
 
 if ($opt.h -or $opt.help) {
-    $content = Get-Content $PSCommandPath -Raw
+    # scoop_help removes the '#' character at the start of each line along with the whitespace
+    # character that follows, but if that whitespace character is a newline because it's just
+    # an empty line, then that empty line is completely removed.
+    # To combat that, we add a space to all lines that are just a '#'.
+    $content = (Get-Content $PSCommandPath -Raw) -replace '(?ms)^#$', '# '
     $usage = usage $content
     $help = scoop_help $content
     return "$usage`n`n$help"
