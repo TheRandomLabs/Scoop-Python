@@ -39,8 +39,7 @@ $ & "$(Split-Path (Split-Path (Get-Command scoop).Source))\buckets\python\script
 * For example, to update Python and all packages in this bucket:
 
 ```powershell
-# Update Python first so that fewer migrations are required if there are also updates for packages
-# in this bucket
+# Update Python first so that fewer migrations are required if there are also updates for packages in this bucket
 scoop update python
 scoop update *
 & "$(Split-Path (Split-Path (Get-Command scoop).Source))\buckets\python\scripts\migrate-python-packages.ps1"
