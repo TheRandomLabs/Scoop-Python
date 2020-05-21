@@ -11,7 +11,7 @@ standalone executables.
 
 This bucket is an alternative to using pip to install these packages.
 
-## Reasoning
+## Motivation
 
 * pip does not have a built-in functionality to update all packages. This is inconvenient for
 command-line tools and other executable applications such as HTTPie.
@@ -34,4 +34,12 @@ directory of this bucket:
 
 ```powershell
 $ & "$(Split-Path (Split-Path (Get-Command scoop).Source))\buckets\python\scripts\migrate-python-packages.ps1" --help
+```
+
+* For example, to update Python and all packages in this bucket:
+
+```powershell
+scoop update python # Update Python first
+scoop update *
+& "$(Split-Path (Split-Path (Get-Command scoop).Source))\buckets\python\scripts\migrate-python-packages.ps1"
 ```
