@@ -1,5 +1,5 @@
 {
-    "version": "1.16.0",
+    "version": "1.17.1",
     "homepage": "https://github.com/codespell-project/codespell",
     "description": "Detects common misspellings in text files.",
     "license": "GPL-2.0-only",
@@ -7,9 +7,9 @@
         "migrate-python-packages",
         "python"
     ],
-    "url": "https://github.com/codespell-project/codespell/archive/v1.16.0.zip",
-    "hash": "2f8d3684079bc32a2f069a67b7fb1660c24ea358525527ae96ce6db6db3a1f65",
-    "extract_dir": "codespell-1.16.0",
+    "url": "https://github.com/codespell-project/codespell/archive/v1.17.1.zip",
+    "hash": "d7de92ee8a61a36bb8b43af31d561f9ab4f288ccab2a3ba11b4463e941f87755",
+    "extract_dir": "codespell-1.17.1",
     "installer": {
         "script": [
             "Push-Location $dir",
