@@ -29,7 +29,7 @@
     },
     "checkver": {
         "url": "https://api.github.com/repos/pypa/twine/tags",
-        "jsonPath": "$[0].name"
+        "jsonpath": "$[0].name"
     },
     "autoupdate": {
         "url": "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Python/master/placeholder.txt"
