@@ -40,7 +40,7 @@ if ($opt.m) { $match = $opt.m }
 elseif ($opt.match) { $match = $opt.match }
 else { $match = ".*$name.*" }
 
-(Get-Content "$directory\installed_files.txt") -match $match | Remove-Item -ErrorAction Ignore -Force
+(Get-Content -ErrorAction Ignore "$directory\installed_files.txt") -match $match | Remove-Item -ErrorAction Ignore -Force
 
 if (Get-Command -ErrorAction Ignore python) {
     if ($global) { $site_packages = "$(Split-Path (scoop which python))\lib\site-packages" }
