@@ -33,7 +33,7 @@ Python update.
 to be installed first through pip:
 
 ```powershell
-$ pip install --upgrade typed_ast --quiet
+$ pip install --upgrade typed_ast
 ```
 
 ## migrate-python-packages
