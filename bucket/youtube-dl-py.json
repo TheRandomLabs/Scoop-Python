@@ -3,10 +3,7 @@
     "homepage": "https://ytdl-org.github.io/youtube-dl/",
     "description": "Command-line downloader for YouTube and other sites.",
     "license": "Unlicense",
-    "depends": [
-        "migrate-python-packages",
-        "python"
-    ],
+    "depends": "python-bucket-utils",
     "suggest": {
         "FFmpeg": [
             "ffmpeg-shared",
@@ -19,18 +16,15 @@
     "extract_dir": "youtube-dl",
     "installer": {
         "script": [
-            "Push-Location $dir",
-            "if ($global) { python setup.py --quiet install --record installed_files.txt }",
-            "else { python setup.py --quiet install --user --record installed_files.txt }",
-            "Pop-Location"
+            "if ($global) { install-python-package --global --quiet --dir $dir }",
+            "else { install-python-package --quiet --dir $dir }",
+            "if ($LASTEXITCODE) { exit 1 }"
         ]
     },
     "uninstaller": {
         "script": [
-            "(Get-Content \"$dir\\installed_files.txt\") -match '.*youtube-dl.*' | Remove-Item -ErrorAction Ignore -Force",
-            "if ($global) { $site_packages = \"$(Split-Path (scoop which python))\\lib\\site-packages\" }",
-            "else { $site_packages = python -m site --user-site }",
-            "Get-ChildItem \"$site_packages\\youtube_dl-*-py*.egg\" | ForEach-Object { Remove-Item -ErrorAction Ignore -Force -Recurse $_ }"
+            "if ($global) { uninstall-python-package youtube_dl --global --dir $dir --match '.*youtube-dl.*' }",
+            "else { uninstall-python-package youtube_dl --dir $dir --match '.*youtube-dl.*' }"
         ]
     },
     "checkver": {

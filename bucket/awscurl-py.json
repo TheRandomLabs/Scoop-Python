@@ -3,27 +3,21 @@
     "homepage": "https://github.com/okigan/awscurl",
     "description": "Curl-like tool for accessing AWS resources.",
     "license": "MIT",
-    "depends": [
-        "migrate-python-packages",
-        "python"
-    ],
+    "depends": "python-bucket-utils",
     "url": "https://github.com/okigan/awscurl/archive/v0.20.zip",
     "hash": "4a73f5f66ae6e19a5ae61b95318c26ce811bd5eab898e5ca02f6adbc403ba49b",
     "extract_dir": "awscurl-0.20",
     "installer": {
         "script": [
-            "Push-Location $dir",
-            "if ($global) { python setup.py --quiet install --record installed_files.txt }",
-            "else { python setup.py --quiet install --user --record installed_files.txt }",
-            "Pop-Location"
+            "if ($global) { install-python-package --global --quiet --dir $dir }",
+            "else { install-python-package --quiet --dir $dir }",
+            "if ($LASTEXITCODE) { exit 1 }"
         ]
     },
     "uninstaller": {
         "script": [
-            "(Get-Content \"$dir\\installed_files.txt\") -match '.*awscurl.*' | Remove-Item -ErrorAction Ignore -Force",
-            "if ($global) { $site_packages = \"$(Split-Path (scoop which python))\\lib\\site-packages\" }",
-            "else { $site_packages = python -m site --user-site }",
-            "Get-ChildItem \"$site_packages\\awscurl-*-py*.egg\" | ForEach-Object { Remove-Item -ErrorAction Ignore -Force -Recurse $_ }"
+            "if ($global) { uninstall-python-package $app --global --dir $dir }",
+            "else { uninstall-python-package $app --dir $dir }"
         ]
     },
     "checkver": "github",

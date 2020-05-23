@@ -42,6 +42,14 @@ $global = $opt.g -or $opt.global
 $quiet = $opt.q -or $opt.quiet
 $verbose = $opt.v -or $opt.verbose
 
+if (-not (Get-Command -ErrorAction Ignore python)) {
+    Write-Host "Python is not installed" -ForegroundColor Red
+    exit 1
+}
+
+$current_version = (python --version) -replace 'Python ', ''
+$local_lib = Split-Path (python -m site --user-site)
+
 function migrate_global($app, $directory) {
     if (-not $quiet) { Write-Host "Migrating $app (global)" -ForegroundColor Cyan }
 
@@ -56,7 +64,6 @@ function migrate_global($app, $directory) {
 
 function migrate_global_if_necessary($app, $directory, $lib) {
     $installed_version = Split-Path (Split-Path $lib) -Leaf
-    $current_version = (python --version) -replace 'Python ', ''
     if ($installed_version -ne $current_version) { migrate_global $app $directory }
     elseif (-not $quiet) { Write-Host "$app (global) does not need to be migrated" -ForegroundColor Magenta }
 }
@@ -74,7 +81,7 @@ function migrate_local($app, $directory) {
 }
 
 function migrate_local_if_necessary($app, $directory, $lib) {
-    if ($lib -ne (Split-Path (python -m site --user-site))) { migrate_local $app $directory }
+    if ($lib -ne $local_lib) { migrate_local $app $directory }
     elseif (-not $quiet) { Write-Host "$app does not need to be migrated" -ForegroundColor Magenta }
 }
 

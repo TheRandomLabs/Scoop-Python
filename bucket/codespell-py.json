@@ -3,27 +3,21 @@
     "homepage": "https://github.com/codespell-project/codespell",
     "description": "Detects common misspellings in text files.",
     "license": "GPL-2.0-only",
-    "depends": [
-        "migrate-python-packages",
-        "python"
-    ],
+    "depends": "python-bucket-utils",
     "url": "https://github.com/codespell-project/codespell/archive/v1.17.1.zip",
     "hash": "d7de92ee8a61a36bb8b43af31d561f9ab4f288ccab2a3ba11b4463e941f87755",
     "extract_dir": "codespell-1.17.1",
     "installer": {
         "script": [
-            "Push-Location $dir",
-            "if ($global) { python setup.py --quiet install --record installed_files.txt }",
-            "else { python setup.py --quiet install --user --record installed_files.txt }",
-            "Pop-Location"
+            "if ($global) { install-python-package --global --quiet --dir $dir }",
+            "else { install-python-package --quiet --dir $dir }",
+            "if ($LASTEXITCODE) { exit 1 }"
         ]
     },
     "uninstaller": {
         "script": [
-            "(Get-Content \"$dir\\installed_files.txt\") -match '.*codespell.*' | Remove-Item -ErrorAction Ignore -Force",
-            "if ($global) { $site_packages = \"$(Split-Path (scoop which python))\\lib\\site-packages\" }",
-            "else { $site_packages = python -m site --user-site }",
-            "Get-ChildItem \"$site_packages\\codespell-*-py*.egg\" | ForEach-Object { Remove-Item -ErrorAction Ignore -Force -Recurse $_ }"
+            "if ($global) { uninstall-python-package $app --global --dir $dir }",
+            "else { uninstall-python-package $app --dir $dir }"
         ]
     },
     "checkver": "github",

@@ -3,28 +3,20 @@
     "homepage": "https://github.com/jaraco/keyring",
     "description": "Provides an easy way to access the system keyring service from Python.",
     "license": "MIT",
-    "depends": [
-        "migrate-python-packages",
-        "git",
-        "python"
-    ],
+    "depends": "python-bucket-utils",
     "url": "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Python/master/placeholder.txt",
     "hash": "8f5572e508c2cb95197e550f54c6bc03cfd4668ef3c9f1011ec3950037cb4b11",
     "installer": {
         "script": [
-            "git clone --quiet -c advice.detachedHead=false --branch \"v$version\" https://github.com/jaraco/keyring.git \"$dir\\$app\"",
-            "Push-Location \"$dir\\$app\"",
-            "if ($global) { python setup.py --quiet install --record \"$dir\\installed_files.txt\" }",
-            "else { python setup.py --quiet install --user --record \"$dir\\installed_files.txt\" }",
-            "Pop-Location"
+            "if ($global) { install-python-package --global --quiet --dir $dir --repo https://github.com/jaraco/keyring.git --branch \"v$version\" --clone-dir $app }",
+            "else { install-python-package --quiet --dir $dir --repo https://github.com/jaraco/keyring.git --branch \"v$version\" --clone-dir $app }",
+            "if ($LASTEXITCODE) { exit 1 }"
         ]
     },
     "uninstaller": {
         "script": [
-            "Get-Content \"$dir\\installed_files.txt\" | Remove-Item -ErrorAction Ignore -Force",
-            "if ($global) { $site_packages = \"$(Split-Path (scoop which python))\\lib\\site-packages\" }",
-            "else { $site_packages = python -m site --user-site }",
-            "Get-ChildItem \"$site_packages\\keyring-*-py*.egg\" | ForEach-Object { Remove-Item -ErrorAction Ignore -Force -Recurse $_ }"
+            "if ($global) { uninstall-python-package $app --global --dir $dir }",
+            "else { uninstall-python-package $app --dir $dir }"
         ]
     },
     "checkver": {

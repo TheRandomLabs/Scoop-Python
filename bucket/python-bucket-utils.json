@@ -1,0 +1,36 @@
+{
+    "version": "2020-05-21T08.59.39",
+    "homepage": "https://github.com/TheRandomLabs/Scoop-Python",
+    "description": "Utilities for working with packages in this bucket.",
+    "license": "Unlicense",
+    "suggest": {
+        "Python": [
+            "python",
+            "versions/python-alpha",
+            "versions/python-beta"
+        ]
+    },
+    "url": [
+        "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Python/master/scripts/install-python-package.ps1",
+        "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Python/master/scripts/migrate-python-packages.ps1",
+        "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Python/master/scripts/uninstall-python-package.ps1"
+    ],
+    "hash": [
+        "7b85537c04e06f225f34be8e891eddbff778fc4cf35b0e4c556327ae8d1ace06",
+        "a9c071f74b1cbc42fe4c45e079d44701cfeec60017ceb499ccb65e463d46cc51",
+        "a54e18c313e249e72183dfd1751a8f2f23e5c30179800bea5a622b1cbd719158"
+    ],
+    "bin": [
+        "install-python-package.ps1",
+        "migrate-python-packages.ps1",
+        "uninstall-python-package.ps1"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/TheRandomLabs/Scoop-Python/commits?path=scripts%2Finstall-python-package.ps1&page=1&per_page=1",
+        "regex": "([\\d-]+T)(\\d+):(\\d+):(\\d+)",
+        "replace": "$1$2.$3.$4"
+    },
+    "autoupdate": {
+        "url": "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Python/master/scripts/install-python-package.ps1"
+    }
+}

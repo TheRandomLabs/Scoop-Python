@@ -3,27 +3,21 @@
     "homepage": "https://github.com/pypa/wheel",
     "description": "Implementation of the Python wheel packaging standard.",
     "license": "MIT",
-    "depends": [
-        "migrate-python-packages",
-        "python"
-    ],
+    "depends": "python-bucket-utils",
     "url": "https://github.com/pypa/wheel/archive/0.34.2.zip",
     "hash": "cf272e9aa1a0ed542056c70bc7d8294bcb2f591bdb7d2ef67b7ddc85fd4230b2",
     "extract_dir": "wheel-0.34.2",
     "installer": {
         "script": [
-            "Push-Location $dir",
-            "if ($global) { python setup.py --quiet install --record installed_files.txt }",
-            "else { python setup.py --quiet install --user --record installed_files.txt }",
-            "Pop-Location"
+            "if ($global) { install-python-package --global --quiet --dir $dir }",
+            "else { install-python-package --quiet --dir $dir }",
+            "if ($LASTEXITCODE) { exit 1 }"
         ]
     },
     "uninstaller": {
         "script": [
-            "Get-Content \"$dir\\installed_files.txt\" | Remove-Item -ErrorAction Ignore -Force",
-            "if ($global) { $site_packages = \"$(Split-Path (scoop which python))\\lib\\site-packages\" }",
-            "else { $site_packages = python -m site --user-site }",
-            "Get-ChildItem \"$site_packages\\wheel-*-py*.egg\" | ForEach-Object { Remove-Item -ErrorAction Ignore -Force -Recurse $_ }"
+            "if ($global) { uninstall-python-package $app --global --dir $dir }",
+            "else { uninstall-python-package $app --dir $dir }"
         ]
     },
     "checkver": "github",

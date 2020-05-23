@@ -3,27 +3,21 @@
     "homepage": "https://httpie.org/",
     "description": "Command-line HTTP client.",
     "license": "BSD-3-Clause",
-    "depends": [
-        "migrate-python-packages",
-        "python"
-    ],
+    "depends": "python-bucket-utils",
     "url": "https://github.com/jakubroztocil/httpie/archive/2.1.0.zip",
     "hash": "0ed60fbded523ce48575c722ce68dffbce69681dbfc8c743ff292a11807de50d",
     "extract_dir": "httpie-2.1.0",
     "installer": {
         "script": [
-            "Push-Location $dir",
-            "if ($global) { python setup.py --quiet install --record installed_files.txt }",
-            "else { python setup.py --quiet install --user --record installed_files.txt }",
-            "Pop-Location"
+            "if ($global) { install-python-package --global --quiet --dir $dir }",
+            "else { install-python-package --quiet --dir $dir }",
+            "if ($LASTEXITCODE) { exit 1 }"
         ]
     },
     "uninstaller": {
         "script": [
-            "(Get-Content \"$dir\\installed_files.txt\") -match '.*http.*' | Remove-Item -ErrorAction Ignore -Force",
-            "if ($global) { $site_packages = \"$(Split-Path (scoop which python))\\lib\\site-packages\" }",
-            "else { $site_packages = python -m site --user-site }",
-            "Get-ChildItem \"$site_packages\\httpie-*-py*.egg\" | ForEach-Object { Remove-Item -ErrorAction Ignore -Force -Recurse $_ }"
+            "if ($global) { uninstall-python-package $app --global --dir $dir --match '.*http.*' }",
+            "else { uninstall-python-package $app --dir $dir --match '.*http.*' }"
         ]
     },
     "checkver": {
