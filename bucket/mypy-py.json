@@ -12,8 +12,6 @@
     "extract_dir": "mypy-0.770",
     "installer": {
         "script": [
-            "# typed_ast requires Microsoft Visual C++ to build, so we just install it from pip.",
-            "pip install --upgrade typed_ast --quiet",
             "if ($global) { install-python-package --global --quiet --dir $dir }",
             "else { install-python-package --quiet --dir $dir }",
             "if ($LASTEXITCODE) { exit 1 }"
