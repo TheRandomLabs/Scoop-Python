@@ -29,12 +29,7 @@ uninstall its dependencies.
 * Packages installed globally from this bucket will need to be migrated for any Python update.
 * Packages installed locally from this bucket will need to be migrated for any minor or major
 Python update.
-* Installing `mypy-py` requires either Microsoft Visual C++ 14.0 to be installed or `typed_ast`
-to be installed first through pip:
-
-```powershell
-$ pip install --upgrade typed_ast --quiet
-```
+* Installing `mypy-py` requires Microsoft Visual C++ 14.0 to be installed.
 
 ## migrate-python-packages
 
