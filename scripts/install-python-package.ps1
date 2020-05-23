@@ -81,11 +81,11 @@ if (-not (Test-Path 'setup.py')) {
 if (Test-Path 'bootstrap.py') { python bootstrap.py }
 
 if ($global) {
-    if ($quiet) { python setup.py --quiet install --record installed_files.txt }
-    else { python setup.py install --record installed_files.txt }
+    if ($quiet) { python setup.py --quiet install --record "$directory\installed_files.txt" }
+    else { python setup.py install --record "$directory\installed_files.txt" }
 } else {
-    if ($quiet) { python setup.py --quiet install --user --record installed_files.txt }
-    else { python setup.py install --user --record installed_files.txt }
+    if ($quiet) { python setup.py --quiet install --user --record "$directory\installed_files.txt" }
+    else { python setup.py install --user --record "$directory\installed_files.txt" }
 }
 
 Pop-Location
