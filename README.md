@@ -29,6 +29,7 @@ uninstall its dependencies.
 * Packages installed globally from this bucket will need to be migrated for any Python update.
 * Packages installed locally from this bucket will need to be migrated for any minor or major
 Python update.
+* Installing `mypy-py` requires pip to be installed.
 
 ## migrate-python-packages
 
