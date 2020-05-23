@@ -16,9 +16,9 @@
         "https://raw.githubusercontent.com/TheRandomLabs/Scoop-Python/master/scripts/uninstall-python-package.ps1"
     ],
     "hash": [
-        "7b85537c04e06f225f34be8e891eddbff778fc4cf35b0e4c556327ae8d1ace06",
-        "a9c071f74b1cbc42fe4c45e079d44701cfeec60017ceb499ccb65e463d46cc51",
-        "a54e18c313e249e72183dfd1751a8f2f23e5c30179800bea5a622b1cbd719158"
+        "e657f6b961214b9b54ab8bea485dc1be84610f8dde3569fe62f1afa19d331457",
+        "7d757d116b6d0d5ce4162584c46e9027329e6d7087e87d0b8f40cfa5656de92f",
+        "a820bfedfee9b6e2c5825442b9664e434d0e61468361f1b262c89e405b51ee01"
     ],
     "bin": [
         "install-python-package.ps1",

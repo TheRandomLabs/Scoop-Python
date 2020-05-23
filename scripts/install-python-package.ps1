@@ -59,7 +59,7 @@ if (-not (Get-Command -ErrorAction Ignore python)) {
     exit 1
 }
 
-if ($repo) {
+if ($repository) {
     if (-not (Get-Command -ErrorAction Ignore git)) {
         Write-Host "Git is not installed"
         exit 1
