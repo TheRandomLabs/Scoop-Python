@@ -1,4 +1,4 @@
-# Usage: install-python-package <name> [options]
+# Usage: uninstall-python-package <name> [options]
 # Summary: Uninstalls a Python package installed using install-python-package
 # Help: For example, to uninstall a Python package installed globally using install-python-package:
 #       uninstall-python-package --global --dir keyring
