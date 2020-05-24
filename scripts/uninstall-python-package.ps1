@@ -1,6 +1,9 @@
 # Usage: install-python-package <name> [options]
 # Summary: Uninstalls a Python package installed using install-python-package
-# Help: Options:
+# Help: For example, to uninstall a Python package installed globally using install-python-package:
+#       uninstall-python-package --global --dir keyring
+#
+# Options:
 #   -h, --help                Show this help message
 #   -g, --global              Uninstall a global package
 #   -d, --dir <dir>           The setup directory
