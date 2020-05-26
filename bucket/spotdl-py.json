@@ -19,8 +19,8 @@
     },
     "uninstaller": {
         "script": [
-            "if ($global) { uninstall-python-package $app --global --dir $dir --match }",
-            "else { uninstall-python-package $app --dir $dir --match }"
+            "if ($global) { uninstall-python-package $app --global --dir $dir }",
+            "else { uninstall-python-package $app --dir $dir }"
         ]
     },
     "checkver": "github",
