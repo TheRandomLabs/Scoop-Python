@@ -1,0 +1,31 @@
+{
+    "version": "9.6.4",
+    "homepage": "https://python-pytube.readthedocs.io/",
+    "description": "Utility for downloading YouTube videos.",
+    "license": "MIT",
+    "depends": "python-bucket-utils",
+    "url": "https://github.com/nficano/pytube/archive/v9.6.4.zip",
+    "hash": "01f8be59acafe4303ade1cf2f1fd13a07843d7a62ba7ee962443d5727fc4cb4d",
+    "extract_dir": "pytube-9.6.4",
+    "installer": {
+        "script": [
+            "if ($global) { install-python-package --global --quiet --dir $dir }",
+            "else { install-python-package --quiet --dir $dir }",
+            "if ($LASTEXITCODE) { exit 1 }"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if ($global) { uninstall-python-package $app --global --dir $dir }",
+            "else { uninstall-python-package $app --dir $dir }"
+        ]
+    },
+    "checkver": {
+        "url": "https://api.github.com/repos/nficano/pytube/tags",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/nficano/pytube/archive/v$version.zip",
+        "extract_dir": "pytube-$version"
+    }
+}
