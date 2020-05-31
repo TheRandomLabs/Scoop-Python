@@ -11,7 +11,7 @@ standalone executables.
 
 This bucket is an alternative to using pip to install these packages.
 
-Also check out my [personal bucket](https://github.com/TheRandomLabs/Scoop-TheRandomLabs)
+Also check out my [personal bucket](https://github.com/TheRandomLabs/Scoop-Bucket)
 and my [Spotify/Spicetify bucket](https://github.com/TheRandomLabs/Scoop-Spotify)!
 
 ## Motivation
