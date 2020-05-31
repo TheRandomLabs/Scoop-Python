@@ -11,6 +11,9 @@ standalone executables.
 
 This bucket is an alternative to using pip to install these packages.
 
+Also check out my [personal bucket](https://github.com/TheRandomLabs/Scoop-TheRandomLabs)
+and my [Spotify/Spicetify bucket](https://github.com/TheRandomLabs/Scoop-Spotify)!
+
 ## Motivation
 
 * pip does not have a built-in functionality to update all packages. This is inconvenient for
