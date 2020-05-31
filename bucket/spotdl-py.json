@@ -1,5 +1,5 @@
 {
-    "version": "2.0.6",
+    "version": "2.0.8",
     "homepage": "https://github.com/ritiek/spotify-downloader",
     "description": "Downloads Spotify playlists from YouTube with album art and metadata.",
     "license": "MIT",
@@ -8,9 +8,9 @@
         "pytube-py",
         "youtube-dl-py"
     ],
-    "url": "https://github.com/ritiek/spotify-downloader/archive/v2.0.6.zip",
-    "hash": "08ae434c1309acb9e642fb18e3a72aeb27a2780ce363b256648afef04b87560c",
-    "extract_dir": "spotify-downloader-2.0.6",
+    "url": "https://github.com/ritiek/spotify-downloader/archive/v2.0.8.zip",
+    "hash": "6b89d20055dd79a1db997ac2b53557c8807331dc3b588ba53f3d8fea09845789",
+    "extract_dir": "spotify-downloader-2.0.8",
     "installer": {
         "script": [
             "if ($global) { install-python-package --global --quiet --dir $dir }",
