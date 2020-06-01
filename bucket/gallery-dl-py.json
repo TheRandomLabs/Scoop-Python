@@ -1,22 +1,22 @@
 {
     "version": "1.14.0",
     "homepage": "https://github.com/mikf/gallery-dl",
-    "description": "Command-line program to download image-galleries and -collections from several image hosting sites",
-    "license": "GNU GPL v2.0",
+    "description": "Command-line utility for downloading image galleries and collections from several image hosting sites.",
+    "license": "GPL-2.0-only",
     "depends": "python-bucket-utils",
     "suggest": {
         "youtube-dl": [
             "youtube-dl-py",
             "youtube-dl"
         ],
-        "FFmpeg": [
-            "ffmpeg-shared",
+        "ffmpeg-nightly": [
+            "ffmpeg",
             "ffmpeg-nightly",
-            "ffmpeg"
+            "ffmpeg-shared"
         ]
     },
     "url": "https://github.com/mikf/gallery-dl/releases/download/v1.14.0/gallery_dl-1.14.0.tar.gz",
-    "hash": "23ba8f31df7f11c0acab9ca71a29a1a89e8697aceac957b0bbd19ce896552f84",
+    "hash": "2b9c29dd5eb689eb78aba69bc4d863ca2a57573afb16a9027d9404e757ec7832",
     "extract_dir": "gallery_dl-1.14.0",
     "installer": {
         "script": [
@@ -31,10 +31,9 @@
             "else { uninstall-python-package gallery_dl --dir $dir --match '.*gallery-dl.*' }"
         ]
     },
-    "checkver": {
-        "github": "https://github.com/mikf/gallery-dl/"
-    },
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/mikf/gallery-dl/releases/download/v$version/gallery_dl-$version.tar.gz"
+        "url": "https://github.com/mikf/gallery-dl/releases/download/v$version/gallery_dl-$version.tar.gz",
+        "extract_dir": "gallery_dl-$version"
     }
 }
