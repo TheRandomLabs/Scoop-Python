@@ -1,12 +1,12 @@
 {
-    "version": "1.3.0",
+    "version": "1.3.1",
     "homepage": "https://github.com/twolfson/restructuredtext-lint",
     "description": "reStructuredText linter.",
     "license": "Unlicense",
     "depends": "python-bucket-utils",
-    "url": "https://github.com/twolfson/restructuredtext-lint/archive/1.3.0.zip",
-    "hash": "9b1937a38384bd55f4ef7d8f79438571c4871a6f0d316f2e655fea113e63c4fb",
-    "extract_dir": "restructuredtext-lint-1.3.0",
+    "url": "https://github.com/twolfson/restructuredtext-lint/archive/1.3.1.zip",
+    "hash": "7c1bff976f00e92d75496fd8d328b145de1c76e396100edef196c4bab3b01608",
+    "extract_dir": "restructuredtext-lint-1.3.1",
     "installer": {
         "script": [
             "if ($global) { install-python-package --global --quiet --dir $dir }",
