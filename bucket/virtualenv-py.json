@@ -1,5 +1,5 @@
 {
-    "version": "20.0.24",
+    "version": "20.0.25",
     "homepage": "https://virtualenv.pypa.io/en/latest/",
     "description": "Virtual Python environment builder.",
     "license": "MIT",
