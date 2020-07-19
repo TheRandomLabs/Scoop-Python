@@ -1,7 +1,7 @@
 {
     "version": "0.30.0",
     "homepage": "https://github.com/google/yapf",
-    "description": "Optional static type checker for Python.",
+    "description": "Python formatter.",
     "license": "Apache-2.0",
     "depends": "python-bucket-utils",
     "url": "https://github.com/google/yapf/archive/v0.30.0.zip",
