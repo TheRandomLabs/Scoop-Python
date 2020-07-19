@@ -1,0 +1,28 @@
+{
+    "version": "0.30.0",
+    "homepage": "https://github.com/google/yapf",
+    "description": "Optional static type checker for Python.",
+    "license": "Apache-2.0",
+    "depends": "python-bucket-utils",
+    "url": "https://github.com/google/yapf/archive/v0.30.0.zip",
+    "hash": "de6fd3f6639f7d97d8521623f418f62c6964e3324a90f99fa7729968a57b1eac",
+    "extract_dir": "yapf-0.30.0",
+    "installer": {
+        "script": [
+            "if ($global) { install-python-package --global --quiet --dir $dir }",
+            "else { install-python-package --quiet --dir $dir }",
+            "if ($LASTEXITCODE) { exit 1 }"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if ($global) { uninstall-python-package $app --global --dir $dir --match '.*' }",
+            "else { uninstall-python-package $app --dir $dir --match '.*' }"
+        ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/google/yapf/archive/v$version.zip",
+        "extract_dir": "yapf-$version"
+    }
+}
