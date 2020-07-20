@@ -19,7 +19,7 @@
             "Copy-Item \"$bucketdir\\..\\scripts\\.ps1\" -Destination $dir",
             "'migrate-python-packages', 'uninstall-python-package' | ForEach-Object { Copy-Item \"$bucketdir\\..\\scripts\\$_.ps1\" -Destination $dir }",
         ]
-    }
+    },
     "bin": [
         "install-python-package.ps1",
         "migrate-python-packages.ps1",
