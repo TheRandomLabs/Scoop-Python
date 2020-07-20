@@ -1,5 +1,5 @@
 {
-    "version": "2020-05-23T03.13.55",
+    "version": "2020-05-25T03.18.34",
     "homepage": "https://github.com/TheRandomLabs/Scoop-Python",
     "description": "Utilities for working with packages in this bucket.",
     "license": "Unlicense",
@@ -17,7 +17,7 @@
             "$null, $bucket = find_manifest($app)",
             "$bucketdir = Find-BucketDirectory($bucket)",
             "Copy-Item \"$bucketdir\\..\\scripts\\.ps1\" -Destination $dir",
-            "'migrate-python-packages', 'uninstall-python-package' | ForEach-Object { Copy-Item \"$bucketdir\\..\\scripts\\$_.ps1\" -Destination $dir }",
+            "'migrate-python-packages', 'uninstall-python-package' | ForEach-Object { Copy-Item \"$bucketdir\\..\\scripts\\$_.ps1\" -Destination $dir }"
         ]
     },
     "bin": [
