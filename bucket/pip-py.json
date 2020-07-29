@@ -1,12 +1,12 @@
 {
-    "version": "20.1.1",
+    "version": "20.2",
     "homepage": "https://github.com/pypa/pip",
     "description": "Package installer for Python.",
     "license": "MIT",
     "depends": "python-bucket-utils",
-    "url": "https://github.com/pypa/pip/archive/20.1.1.zip",
-    "hash": "abf60d3c3a9452babb92d9306e4d38e4a276999a5becd7e45df727032b458c6d",
-    "extract_dir": "pip-20.1.1",
+    "url": "https://github.com/pypa/pip/archive/20.2.zip",
+    "hash": "ed92e271907f196678deccf93c4e4f8a2c951d36c0f115ff6781bcf6bbd805d7",
+    "extract_dir": "pip-20.2",
     "installer": {
         "script": [
             "if ($global) { install-python-package --global --quiet --dir $dir }",
