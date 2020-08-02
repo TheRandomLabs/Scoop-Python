@@ -1,12 +1,12 @@
 {
-    "version": "49.2.0",
+    "version": "49.2.1",
     "homepage": "https://github.com/pypa/setuptools",
     "description": "Library designed to facilitate packaging Python projects.",
     "license": "MIT",
     "depends": "python-bucket-utils",
-    "url": "https://github.com/pypa/setuptools/archive/v49.2.0.zip",
-    "hash": "3245dbca5e1cd7b0c19c9df02240dad3516a14e9328169fbaf56be537fa78e99",
-    "extract_dir": "setuptools-49.2.0",
+    "url": "https://github.com/pypa/setuptools/archive/v49.2.1.zip",
+    "hash": "03f1b72d52b50c7f41d1f6e27a887adefab905e967b4ccadddc9a155cfca5a39",
+    "extract_dir": "setuptools-49.2.1",
     "installer": {
         "script": [
             "if ($global) { install-python-package --global --quiet --dir $dir }",
