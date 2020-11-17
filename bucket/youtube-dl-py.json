@@ -1,5 +1,5 @@
 {
-    "version": "2020.11.17",
+    "version": "2020.11.18",
     "homepage": "https://ytdl-org.github.io/youtube-dl/",
     "description": "Command-line downloader for YouTube and other sites.",
     "license": "Unlicense",
@@ -11,8 +11,8 @@
             "ffmpeg"
         ]
     },
-    "url": "https://github.com/ytdl-org/youtube-dl/releases/download/2020.11.17/youtube-dl-2020.11.17.tar.gz",
-    "hash": "62854617c40c700db4d5f5a49fceb4642c0b3cfdd55769cc0c568a6a77d51b2c",
+    "url": "https://github.com/ytdl-org/youtube-dl/releases/download/2020.11.18/youtube-dl-2020.11.18.tar.gz",
+    "hash": "6dbbc339520df3634c57678756dcd81c9dc6f95af91f2032b33d5c2ef0f3fedf",
     "extract_dir": "youtube-dl",
     "installer": {
         "script": [
