@@ -1,5 +1,5 @@
 {
-    "version": "1.15.4",
+    "version": "1.16.0",
     "homepage": "https://github.com/mikf/gallery-dl",
     "description": "Command-line utility for downloading image galleries and collections from several image hosting sites.",
     "license": "GPL-2.0-only",
@@ -15,9 +15,9 @@
             "ffmpeg-shared"
         ]
     },
-    "url": "https://github.com/mikf/gallery-dl/releases/download/v1.15.4/gallery_dl-1.15.4.tar.gz",
-    "hash": "21043feb68b932a4fd24687c72b1315e96b44518b80091444bcfa795df0bd62f",
-    "extract_dir": "gallery_dl-1.15.4",
+    "url": "https://github.com/mikf/gallery-dl/releases/download/v1.16.0/gallery_dl-1.16.0.tar.gz",
+    "hash": "35df7605a21a05c3290f4324289fd6f584029f4135a8220dec7d490c4e742a1c",
+    "extract_dir": "gallery_dl-1.16.0",
     "installer": {
         "script": [
             "if ($global) { install-python-package --global --quiet --dir $dir }",
