@@ -1,12 +1,12 @@
 {
-    "version": "0.36.1",
+    "version": "0.36.2",
     "homepage": "https://github.com/pypa/wheel",
     "description": "Implementation of the Python wheel packaging standard.",
     "license": "MIT",
     "depends": "python-bucket-utils",
-    "url": "https://github.com/pypa/wheel/archive/0.36.1.zip",
-    "hash": "d7f150d29a320379172c67bba8c9cf5b50cc28ad10ed21e1db91193015dc70ab",
-    "extract_dir": "wheel-0.36.1",
+    "url": "https://github.com/pypa/wheel/archive/0.36.2.zip",
+    "hash": "40b624df5cbdea1fa1f4b5158337685a71384fd1f10c4d7e526dd6a103b713a8",
+    "extract_dir": "wheel-0.36.2",
     "installer": {
         "script": [
             "if ($global) { install-python-package --global --quiet --dir $dir }",
