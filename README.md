@@ -2,7 +2,7 @@
 <!-- markdownlint-disable MD014 -->
 <!-- markdownlint-disable MD046 -->
 
-# Scoop-Python
+# Scoop-Python [![Build status](https://ci.appveyor.com/api/projects/status/0m7xf2hxvwj32qnf/branch/master?svg=true)](https://ci.appveyor.com/project/TheRandomLabs/scoop-python/branch/master)
 
 A [Scoop](https://github.com/lukesampson/scoop) bucket for Python applications that do not provide
 standalone executables.
