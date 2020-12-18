@@ -7,7 +7,7 @@
 A [Scoop](https://github.com/lukesampson/scoop) bucket for Python applications that do not provide
 standalone executables.
 
-	$ scoop bucket add python https://github.com/TheRandomLabs/Scoop-Python.git
+    $ scoop bucket add python https://github.com/TheRandomLabs/Scoop-Python.git
 
 This bucket is an alternative to using pip to install these packages.
 
