@@ -1,5 +1,5 @@
 {
-    "version": "2020.11.20.",
+    "version": "2021.01.14",
     "homepage": "https://github.com/deepjyoti30/ytmdl",
     "description": "Downloads songs from YouTube with metadata. DOES NOT YET SUPPORT WINDOWS; THIS WILL NOT WORK.",
     "license": "MIT",
@@ -8,9 +8,9 @@
         "pytube-py",
         "youtube-dl-py"
     ],
-    "url": "https://github.com/deepjyoti30/ytmdl/archive/2020.11.20..zip",
-    "hash": "2ba2cf9647170a0f4e73971f90a9858fa6fc1d0eceb6d4f11a12dbe1f75c7b93",
-    "extract_dir": "ytmdl-2020.11.20.",
+    "url": "https://github.com/deepjyoti30/ytmdl/archive/2021.01.14.zip",
+    "hash": "95bf94dd5007ab60f7250afc9fca7053e1f708546cdef0a21a4e73469be0be3e",
+    "extract_dir": "ytmdl-2021.01.14",
     "installer": {
         "script": [
             "if ($global) { install-python-package --global --quiet --dir $dir }",
