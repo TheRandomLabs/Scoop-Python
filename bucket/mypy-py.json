@@ -1,5 +1,5 @@
 {
-    "version": "0.800",
+    "version": "0.810",
     "homepage": "http://www.mypy-lang.org/",
     "description": "Optional static type checker for Python.",
     "license": {
@@ -7,9 +7,9 @@
         "url": "https://github.com/python/mypy/blob/master/LICENSE"
     },
     "depends": "python-bucket-utils",
-    "url": "https://github.com/python/mypy/archive/v0.800.zip",
-    "hash": "37302d937b58aec4525cc3117049e521d680099bba288d0305a01dfd6871f60f",
-    "extract_dir": "mypy-0.800",
+    "url": "https://github.com/python/mypy/archive/v0.810.zip",
+    "hash": "d0e6a106e8debede9c1959566d3380f5ae9cc4ae3e1c7beecdd440b383059b71",
+    "extract_dir": "mypy-0.810",
     "installer": {
         "script": [
             "if ($global) { install-python-package --global --quiet --dir $dir }",
