@@ -1,12 +1,12 @@
 {
-    "version": "10.5.0",
+    "version": "10.5.1",
     "homepage": "https://python-pytube.readthedocs.io/",
     "description": "Utility for downloading YouTube videos.",
     "license": "MIT",
     "depends": "python-bucket-utils",
-    "url": "https://github.com/nficano/pytube/archive/v10.5.0.zip",
-    "hash": "7129311fe2248c1c7e6ab83029fa8e2e79c0c77719ba343ac9f73c4d84ad8f97",
-    "extract_dir": "pytube-10.5.0",
+    "url": "https://github.com/nficano/pytube/archive/v10.5.1.zip",
+    "hash": "862234e72bce59a86484c8b372d535b99c556544f10b28cfe2774c3550a978cb",
+    "extract_dir": "pytube-10.5.1",
     "installer": {
         "script": [
             "if ($global) { install-python-package --global --quiet --dir $dir }",
