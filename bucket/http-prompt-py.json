@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0",
+    "version": "2.1.0",
     "homepage": "http://http-prompt.com/",
     "description": "Command-line HTTP client featuring autocomplete and syntax highlighting.",
     "license": "MIT",
@@ -7,9 +7,9 @@
         "httpie-py",
         "python-bucket-utils"
     ],
-    "url": "https://github.com/eliangcs/http-prompt/archive/v1.0.0.zip",
-    "hash": "4acd861573346c7409c8f8363b3cc2d321a52887f1120f4617b59a0e6b80d4c7",
-    "extract_dir": "http-prompt-1.0.0",
+    "url": "https://github.com/eliangcs/http-prompt/archive/v2.1.0.zip",
+    "hash": "f7a96441988ce012305eac616d8f7e300e84571af1e34cf01137774b4c0ff6a6",
+    "extract_dir": "http-prompt-2.1.0",
     "installer": {
         "script": [
             "if ($global) { install-python-package --global --quiet --dir $dir }",
