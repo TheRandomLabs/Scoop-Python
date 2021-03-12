@@ -1,12 +1,12 @@
 {
-    "version": "0.30.0",
+    "version": "0.31.0",
     "homepage": "https://github.com/google/yapf",
     "description": "Python formatter.",
     "license": "Apache-2.0",
     "depends": "python-bucket-utils",
-    "url": "https://github.com/google/yapf/archive/v0.30.0.zip",
-    "hash": "de6fd3f6639f7d97d8521623f418f62c6964e3324a90f99fa7729968a57b1eac",
-    "extract_dir": "yapf-0.30.0",
+    "url": "https://github.com/google/yapf/archive/v0.31.0.zip",
+    "hash": "0d14da332e42b51ba29242417d8f46a9cbf6df8e024e1ffa0868b154f327ba4b",
+    "extract_dir": "yapf-0.31.0",
     "installer": {
         "script": [
             "if ($global) { install-python-package --global --quiet --dir $dir }",
