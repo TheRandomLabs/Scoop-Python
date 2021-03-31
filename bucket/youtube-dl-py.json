@@ -1,5 +1,5 @@
 {
-    "version": "2021.03.31",
+    "version": "2021.04.01",
     "homepage": "https://ytdl-org.github.io/youtube-dl/",
     "description": "Command-line downloader for YouTube and other sites.",
     "license": "Unlicense",
@@ -11,8 +11,8 @@
             "ffmpeg"
         ]
     },
-    "url": "https://github.com/ytdl-org/youtube-dl/releases/download/2021.03.31/youtube-dl-2021.03.31.tar.gz",
-    "hash": "f215d0e297febca0552e309dba12d62c53a56ed138de314d63b7fb80617e6ceb",
+    "url": "https://github.com/ytdl-org/youtube-dl/releases/download/2021.04.01/youtube-dl-2021.04.01.tar.gz",
+    "hash": "f098ef95933a33096f60cb8c3bfbde710f6f84c9cad1b093082584bdc4a089ef",
     "extract_dir": "youtube-dl",
     "installer": {
         "script": [
