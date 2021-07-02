@@ -1,12 +1,12 @@
 {
-    "version": "0.21",
+    "version": "0.22",
     "homepage": "https://github.com/okigan/awscurl",
     "description": "Curl-like tool for accessing AWS resources.",
     "license": "MIT",
     "depends": "python-bucket-utils",
-    "url": "https://github.com/okigan/awscurl/archive/v0.21.zip",
-    "hash": "a5e4fc607b592281030a8b980d10954c0e0f32e0b923ce9749291eca8670ffbd",
-    "extract_dir": "awscurl-0.21",
+    "url": "https://github.com/okigan/awscurl/archive/v0.22.zip",
+    "hash": "5d584651f0031dd79db271404a13d4193cc6f59589f6122bd02be99ffcb18d1f",
+    "extract_dir": "awscurl-0.22",
     "installer": {
         "script": [
             "if ($global) { install-python-package --global --quiet --dir $dir }",
