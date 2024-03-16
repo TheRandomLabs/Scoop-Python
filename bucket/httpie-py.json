@@ -5,7 +5,7 @@
     "license": "BSD-3-Clause",
     "depends": "python-bucket-utils",
     "url": "https://github.com/jakubroztocil/httpie/archive/3.2.2.zip",
-    "hash": "da88f481544e70ff420f78ddf7158e2bc2bbd63c0bad28f2fe274a1ca1840eea",
+    "hash": "7fce63adae18da945912199e6bf5fc3bc44f7fba9bc5dc04e56ae99e39006691",
     "extract_dir": "httpie-3.2.2",
     "installer": {
         "script": [
