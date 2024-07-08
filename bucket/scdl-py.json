@@ -1,5 +1,5 @@
 {
-    "version": "2024-06-27T17.28.29",
+    "version": "2024-07-08T16.47.41",
     "homepage": "https://github.com/flyingrub/scdl",
     "description": "SoundCloud music downloader.",
     "license": "GPL-2.0-only",
@@ -11,7 +11,7 @@
         ]
     },
     "url": "https://github.com/flyingrub/scdl/archive/master.zip",
-    "hash": "324281fc2f6c6c318e28a32839abe6fc6b6252bf73064ead07bbf23b9a8b9200",
+    "hash": "c0e5549c42dbd01a68056e81af96090a2004982e5a4b1904bee8a0e5da7e4c65",
     "extract_dir": "scdl-master",
     "installer": {
         "script": [
