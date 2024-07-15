@@ -1,5 +1,5 @@
 {
-    "version": "7.4.2",
+    "version": "7.4.3",
     "homepage": "https://www.sphinx-doc.org/en/master/",
     "description": "Documentation builder.",
     "license": {
@@ -7,9 +7,9 @@
         "url": "https://github.com/sphinx-doc/sphinx/blob/3.x/LICENSE"
     },
     "depends": "python-bucket-utils",
-    "url": "https://github.com/sphinx-doc/sphinx/archive/v7.4.2.zip",
-    "hash": "8f147128c4b6a3ab62f231ad21ce7fe88c4ef7e1c6ded63948529050d486be13",
-    "extract_dir": "sphinx-7.4.2",
+    "url": "https://github.com/sphinx-doc/sphinx/archive/v7.4.3.zip",
+    "hash": "1337ca6a257f121c49cf3c8cc745236990caaa15bd9c1a8111ae4e48291f08f8",
+    "extract_dir": "sphinx-7.4.3",
     "installer": {
         "script": [
             "if ($global) { install-python-package --global --quiet --dir $dir }",
