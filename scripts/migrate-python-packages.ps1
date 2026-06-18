@@ -15,7 +15,7 @@
 #   -q, --quiet               Do not write package names to console
 #   -v, --verbose             Display all output
 
-$scoop_lib = "$(Split-Path (Split-Path (scoop which scoop)))\lib"
+$scoop_lib = Join-Path (scoop prefix scoop) lib
 . "$scoop_lib\buckets.ps1"
 . "$scoop_lib\getopt.ps1"
 . "$scoop_lib\help.ps1"
