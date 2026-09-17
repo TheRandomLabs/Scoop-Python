@@ -14,9 +14,9 @@
     "hash": "7408184e93125e21914a35335ab2978146cc197d6fada2a30119471337173c0c",
     "installer": {
         "script": [
-            "$null, $bucket = find_manifest($app)",
+            "$null, $null, $bucket, $null = Get-Manifest($app)",
             "$bucketdir = Find-BucketDirectory($bucket)",
-            "Copy-Item \"$bucketdir\\..\\scripts\\.ps1\" -Destination $dir",
+            "Copy-Item \"$bucketdir\\..\\scripts\\$fname\" -Destination $dir",
             "'migrate-python-packages', 'uninstall-python-package' | ForEach-Object { Copy-Item \"$bucketdir\\..\\scripts\\$_.ps1\" -Destination $dir }"
         ]
     },
