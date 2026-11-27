@@ -14,7 +14,7 @@
 #   -b, --branch <branch>     Git repository branch
 #   -c, --clone-dir <name>    Git clone directory name
 
-$scoop_lib = "$(Split-Path (Split-Path (scoop which scoop)))\lib"
+$scoop_lib = Join-Path (scoop prefix scoop) lib
 . "$scoop_lib\getopt.ps1"
 . "$scoop_lib\help.ps1"
 

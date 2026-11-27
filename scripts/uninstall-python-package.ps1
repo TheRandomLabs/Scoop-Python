@@ -9,7 +9,7 @@
 #   -d, --dir <dir>           The setup directory
 #   -m, --match <pattern>     Pattern that specifies which files to remove
 
-$scoop_lib = "$(Split-Path (Split-Path (scoop which scoop)))\lib"
+$scoop_lib = Join-Path (scoop prefix scoop) lib
 . "$scoop_lib\getopt.ps1"
 . "$scoop_lib\help.ps1"
 
